@@ -60,3 +60,7 @@ crashlytics-build.properties
 
 # Rider
 /.idea
+
+# UniRx
+/[Aa]ssets/[Pp]lugins/UniRx/
+/[Aa]ssets/[Pp]lugins/UniRx.meta

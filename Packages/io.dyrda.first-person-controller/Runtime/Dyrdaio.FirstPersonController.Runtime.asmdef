@@ -1,0 +1,17 @@
+{
+    "name": "Dyrdaio.FirstPersonController.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "UniRx",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

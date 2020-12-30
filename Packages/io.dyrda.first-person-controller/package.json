@@ -1,8 +1,7 @@
 {
-  "name": "io.dyrda.template-package-for-unity",
+  "name": "io.dyrda.first-person-controller",
   "version": "0.0.1",
-  "displayName": "Template Package",
-  "description": "",
+  "displayName": "First Person Controller",
   "unity": "2019.1",
   "unityRelease": "0b5",
   "keywords": [],
@@ -10,5 +9,8 @@
     "name": "Daniel Dyrda",
     "email": "daniel@dyrda.io",
     "url": "https://www.dyrda.io"
+  },
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.1"
   }
 }
