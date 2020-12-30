@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy-to-upm:
     name: Deploy to UPM
     runs-on: ubuntu-latest
     env:
-        PKG_ROOT: Packages/io.dyrda.package-template
+        PKG_ROOT: Packages/io.dyrda.first-person-controller
     steps:
     - uses: actions/checkout@v2
       with:
