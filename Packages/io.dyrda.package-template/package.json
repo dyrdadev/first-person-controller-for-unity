@@ -1,0 +1,14 @@
+{
+  "name": "io.dyrda.template-package-for-unity",
+  "version": "0.0.1",
+  "displayName": "Template Package",
+  "description": "",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "keywords": [],
+  "author": {
+    "name": "Daniel Dyrda",
+    "email": "daniel@dyrda.io",
+    "url": "https://www.dyrda.io"
+  }
+}

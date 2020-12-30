@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy-to-upm:
+    name: Deploy to UPM
+    runs-on: ubuntu-latest
+    env:
+        PKG_ROOT: Packages/io.dyrda.package-template
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0   
+    - name: copy master readme to temp
+      run: |
+        mkdir temp
+        cp README.md temp/
+        cp README.md.meta temp/
+    - name: split upm-raw branch
+      run: |
+        git subtree split -P "$PKG_ROOT" -b upm-raw
+        git push -u origin upm-raw
+    - name: update upm branch
+      run: |
+        git fetch
+        git push origin --delete upm
+        git checkout -b upm upm-raw
+        git push origin upm
+    - name: overwrite package readme with current master readme
+      run: |  
+        # echo "WHATioo" >> temp/README.md
+        cat temp/README.md > README.md
+        cat temp/README.md.meta > README.md.meta
+    - name: prepare readme commit
+      run: |
+        # Remove temp
+        sudo rm -r -f temp/
+        # Set necessary information
+        git config --local user.email "github-action@dyrda.io" 
+        git config --local user.name "github-action"
+    - name: optional readme commit
+      run: |
+        git add "README.md"
+        git add "README.md.meta" 
+        git commit -m"Automatically copied the original README file to the upm package.";
+        # if [[ $(git diff --exit-code README.md) ]]; then
+        # git add "README.md" && git commit -m"Automatically copied the original README file to the upm package.";
+        # fi
+    - name: push upm branch
+      run: |  
+        git push -u origin upm
