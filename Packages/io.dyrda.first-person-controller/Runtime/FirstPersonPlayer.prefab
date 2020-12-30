@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSignalsInterfaceTarget: {fileID: 4374804948076272335}
-  walkBobMagnitude: 0.05
+  walkBobMagnitude: 0.04
   runBobMagnitude: 0.1
   bobCurve:
     serializedVersion: 2
@@ -215,10 +215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPersonControllerInput: {fileID: 4277090248450959927}
-  walkSpeed: 5
-  runSpeed: 10
-  jumpForceMagnitude: 20
-  strideLength: 2.5
+  walkSpeed: 7
+  runSpeed: 12
+  jumpForceMagnitude: 11
+  strideLength: 4.5
   stickToGroundForceMagnitude: 5
   minViewAngle: -60
   maxViewAngle: 60
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090f897c207f96b40a9664db4a524003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSmoothingFactor: 6
+  lookSmoothingFactor: 14
 --- !u!1 &6014803277231219246
 GameObject:
   m_ObjectHideFlags: 0
