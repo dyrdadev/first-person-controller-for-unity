@@ -14,7 +14,6 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
     </a>
     <br>
     <br>
-    <br>
 </p>
 
 ## Quick Start
