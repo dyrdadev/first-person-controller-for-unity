@@ -72,7 +72,7 @@ You can do this by using the Package Manager window or the manifest.json directl
 
 ## License
 
-This package is licensed under a MIT license. See the [LICENSE](/LICENSE) file for details.
+This package is licensed under a MIT license. See the [LICENSE](./LICENSE) file for details.
 
 ## Support
 
