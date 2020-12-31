@@ -4,7 +4,7 @@
 
 > 🧪 **EXPERIMENTAL** This project is experimental. It is still under development. It may be unstable. It is not optimized and largely untested . Do **not** use this project in critical projects.
 
-This package includes a First-Person Controller for Unity. Check out the [Features](#features) section for a detailed list of all features of the controller. The footage below shows the [open-source sample project "Mapper's Peak"](https://github.com/dyrdaio/mappers-peak) using the First-Person Controller.
+This package includes a First-Person Controller for Unity. Check out the [Features](#features) section for a detailed list of all features of the controller. The footage below shows the open-source sample project ["Mapper's Peak"](https://github.com/dyrdaio/mappers-peak) using the First-Person Controller.
 
 <p align=center>
     <br>
