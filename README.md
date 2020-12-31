@@ -68,7 +68,7 @@ You can install the package using a Git URL. This is possible for direct depende
 You can do this by using the Package Manager window or the manifest.json directly:
 
 1. **Installing from a Git URL using the Package Manager window.** Open the Package Manager window. Click "+", then "Add package from git URL" and enter the git URL from above. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
-2. **Installing from a Git URL using the manifest.json.** You can add a new entry to the manifest.json file in the ``Packages`` folder of your unity project: ```"io.dyrda.first-person-controller": "https://github.com/dyrdaio/first-person-controller-for-unity.git##upm"```. You can find more information [here](https://docs.unity3d.com/Manual/upm-git.html).
+2. **Installing from a Git URL using the manifest.json.** You can add a new entry to the manifest.json file in the ``Packages`` folder of your unity project: ```"io.dyrda.first-person-controller": "https://github.com/dyrdaio/first-person-controller-for-unity.git#upm"```. You can find more information [here](https://docs.unity3d.com/Manual/upm-git.html).
 
 ## License
 
