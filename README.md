@@ -47,7 +47,7 @@ The First-Person Controller implements physics based locomotion so you can move 
 
 ### Character Effects
 
-The controller implements a ```ICharacterSignals``` interface that can be used for character effects such as character audio or camera effects. It is very easy to implement your own effects using this interface. The package includes the following effects, which are already implemented:
+The controller implements a ```ICharacterSignals``` interface for character effects such as character audio or camera effects. The interface offers you an easy way to implement your own effects. The package includes the following effects, which are already implemented:
 
 #### Head Bob
 
