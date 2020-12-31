@@ -19,8 +19,8 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 ## Quick Start
 
 1. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
-2. **Install UniRx:** The package depends on [UniRx](https://github.com/neuecc/UniRx). Unfortunately, this dependency cannot be included automatically. The reason is described below in the ["Special Dependencies" section](#unirx). You have to include UniRx in your project. UniRx is available [via Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276) or you can include it [as UPM package](https://github.com/neuecc/UniRx#upm-package).
-3. **Update to Unity's new Input System** This package uses Unity's [Input System package](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
+2. **Install UniRx:** The package depends on [UniRx](https://github.com/neuecc/UniRx). Unfortunately, this dependency cannot be included automatically. The reason is described below in the ["Special Dependencies"](#unirx) section. You have to include UniRx in your project. UniRx is available [via Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276) or you can include it [as UPM package](https://github.com/neuecc/UniRx#upm-package).
+3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
 ## Special Dependencies
