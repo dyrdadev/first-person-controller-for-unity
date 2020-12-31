@@ -10,7 +10,7 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
     <br>
     <br>
     <a href="./README.md">
-        <img src="./Media/first_person_controller_github_preview.gif" alt="Gameplay footage from the 'Mapper's Peak' sample project using the First-Person Controller"/>
+        <img src="https://dyrda.io/media/packages/first-person-controller/first_person_controller_github_preview.gif" alt="Gameplay footage from the 'Mapper's Peak' sample project using the First-Person Controller"/>
     </a>
     <br>
     <br>
