@@ -33,7 +33,7 @@ If you want to learn UniRx to extend the controller or use it for other componen
 
 ## Unity's new Input System
 
-The project includes player input and uses Unity's new [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If you do not want to switch to the new input system, you can cancel the update process after the import, and implement your own ```FirstPersonControllerInput``` class that uses the input method of your choice.
+The project includes player input and uses Unity's new [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If you do not want to switch to the new input system, you can cancel the update process after the import, and implement your own ```FirstPersonControllerInput``` class that uses the input system of your choice.
 
 ## Features
 
