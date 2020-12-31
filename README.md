@@ -1,4 +1,4 @@
-# First Person Controller for Unity
+# First-Person Controller for Unity
 
 > A First-Person Controller for Unity.
 
