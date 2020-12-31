@@ -89,42 +89,45 @@ namespace DyrdaIo.FirstPersonController
                 .Subscribe(i =>
                 {
                     var wasGrounded = _characterController.isGrounded;
-
-                    // Vertical movements (jumping and gravity) are the player's y-axis.
+                    
+                    // Vertical movement:
                     var verticalVelocity = 0f;
+                    // The character is ...
                     if (i.Jump && wasGrounded)
                     {
-                        // We're on the ground and want to jump.
+                        // ... grounded and wants to jump.
+                        
                         verticalVelocity = jumpForceMagnitude;
                         _jumped.OnNext(Unit.Default);
                     }
                     else if (!wasGrounded)
                     {
-                        // We're in the air: apply gravity.
+                        // ... in the air.
+                        
                         verticalVelocity = _characterController.velocity.y + Physics.gravity.y * Time.deltaTime * 3.0f;
                     }
                     else
                     {
-                        // We're otherwise on the ground: push us down a little.
-                        // (Required for character.isGrounded to work.)
+                        // ... otherwise grounded.
+                        
                         verticalVelocity = -Mathf.Abs(stickToGroundForceMagnitude);
                     }
 
-                    // Horizontal movements are the player's x- and z-axes.
+                    // Horizontal movement:
                     var currentSpeed = firstPersonControllerInput.Run.Value ? runSpeed : walkSpeed;
                     var horizontalVelocity = i.Move * currentSpeed; //Calculate velocity (direction * speed).
 
-                    // Combine horizontal and vertical into player coordinate space.
+                    // Combine horizontal and vertical movement.
                     var characterVelocity = transform.TransformVector(new Vector3(
-                        horizontalVelocity.x, // input x (+/-) corresponds to strafe right/left (player x-axis)
+                        horizontalVelocity.x,
                         verticalVelocity,
-                        horizontalVelocity.y)); // input y (+/-) corresponds to forward/back (player z-axis)
+                        horizontalVelocity.y));
 
                     // Apply movement.
                     var distance = characterVelocity * Time.deltaTime;
                     _characterController.Move(distance);
 
-                    // Set ICharacterSignals output signals related to the movement:
+                    // Set ICharacterSignals output signals related to the movement.
                     HandleLocomotionCharacterSignalsIteration(wasGrounded, _characterController.isGrounded);
                 }).AddTo(this);
         }
@@ -135,13 +138,13 @@ namespace DyrdaIo.FirstPersonController
 
             if (wasGrounded && isGrounded)
             {
-                // Both started and ended this frame on the ground.
+                // The character was grounded at the beginning and end of this frame.
 
                 _moved.OnNext(_characterController.velocity * Time.deltaTime);
 
                 if (_characterController.velocity.magnitude > 0)
                 {
-                    // The chaarcter is running if the input is active and
+                    // The character is running if the input is active and
                     // the character is actually moving on the ground
                     tempIsRunning = firstPersonControllerInput.Run.Value;
                 }
@@ -149,7 +152,8 @@ namespace DyrdaIo.FirstPersonController
 
             if (!wasGrounded && isGrounded)
             {
-                // Didn't start on the ground, but ended up there.
+                // The character was airborne at the beginning, but grounded at the end of this frame.
+                
                 _landed.OnNext(Unit.Default);
             }
 
@@ -159,6 +163,7 @@ namespace DyrdaIo.FirstPersonController
         private void HandleSteppedCharacterSignal()
         {
             // Emit stepped events:
+            
             var stepDistance = 0f;
             moved.Subscribe(w =>
             {
@@ -188,9 +193,7 @@ namespace DyrdaIo.FirstPersonController
                     // Vertical look with rotation around the horizontal axis, where + means upwards.
                     var verticalLook = inputLook.y * Vector3.left * Time.deltaTime;
                     var newQ = _camera.transform.localRotation * Quaternion.Euler(verticalLook);
-
-                    // We have to flip the signs and positions of min/max view angle here because the math
-                    // uses the contradictory interpretation of our angles (+/- is down/up).
+                    
                     _camera.transform.localRotation =
                         RotationTools.ClampRotationAroundXAxis(newQ, -maxViewAngle, -minViewAngle);
                 }).AddTo(this);
