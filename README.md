@@ -45,11 +45,15 @@ The First-Person Controller supports a mouse + keyboard input scheme and a gamep
 
 The First-Person Controller implements physics based locomotion so you can move around, and run, and jump.
 
-### Head Bob
+### Character Effects
+
+The controller implements a ```ICharacterSignals``` interface that can be used for character effects such as character audio or camera effects. It is very easy to implement your own effects using this interface. The package includes the following effects, which are already implemented:
+
+#### Head Bob
 
 The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
 
-### Sound Effects
+#### Sound Effects
 
 The package includes an optional component for sound effects of the character.
 
