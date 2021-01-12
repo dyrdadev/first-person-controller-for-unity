@@ -31,9 +31,9 @@ The controller depends on UniRx. UniRx is the implementation of ReactiveX for Un
 
 If you want to learn UniRx to extend the controller or use it for other components, I recommend you the tutorial series ["ReactiveX and Unity3D"](https://ornithoptergames.com/reactiverx-in-unity3d-part-1/) by Tyler Coles. Also check out the official material of [UniRx](https://github.com/neuecc/UniRx) and [ReactiveX](http://reactivex.io/).
 
-## Unity's new Input System
+## Input System Package
 
-The project includes player input and uses Unity's new [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If need the ```UnityEngine.Input``` input system, you can set the "Active Input Handling" option in the Player settings (Project Settings -> Player -> Other Settings) to ```Both```.
+The project includes player input and uses Unity's new [Input System Package](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system with the Input Manager in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If you need the ```UnityEngine.Input``` input system, you can set the "Active Input Handling" option in the Player settings (Project Settings -> Player -> Other Settings) to ```Both```. Then you can use the new Input System Package System and the old Input Manager with the ```UnityEngine.Input``` class.
 
 If you do not want to switch to the new input system, you can implement your own ```FirstPersonControllerInput``` class that uses the input system of your choice.
 
