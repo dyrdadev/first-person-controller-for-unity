@@ -1,0 +1,14 @@
+{
+  "name": "dev.dyrda.first-person-controller",
+  "version": "0.0.2",
+  "displayName": "First Person Controller",
+  "keywords": [],
+  "author": {
+    "name": "Daniel Dyrda",
+    "email": "dyrda.dev@posteo.de",
+    "url": "https://www.dyrda.io"
+  },
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.1"
+  }
+}
