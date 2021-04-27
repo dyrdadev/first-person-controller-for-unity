@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-namespace DyrdaIo.FirstPersonController
+namespace DyrdaDev.FirstPersonController
 {
     [RequireComponent(typeof(AudioSource))]
     public class CharacterMovementAudio : MonoBehaviour

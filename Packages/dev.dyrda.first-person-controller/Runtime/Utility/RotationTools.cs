@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DyrdaIo.FirstPersonController
+namespace DyrdaDev.FirstPersonController
 {
     public static class RotationTools
     {

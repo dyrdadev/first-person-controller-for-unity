@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace DyrdaIo.FirstPersonController
+namespace DyrdaDev.FirstPersonController
 {
     public class @FirstPersonInputAction : IInputActionCollection, IDisposable
     {

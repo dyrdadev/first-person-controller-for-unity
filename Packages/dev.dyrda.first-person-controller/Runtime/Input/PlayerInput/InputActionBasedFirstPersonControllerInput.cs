@@ -3,7 +3,7 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
-namespace DyrdaIo.FirstPersonController
+namespace DyrdaDev.FirstPersonController
 {
     public class InputActionBasedFirstPersonControllerInput : FirstPersonControllerInput
     {

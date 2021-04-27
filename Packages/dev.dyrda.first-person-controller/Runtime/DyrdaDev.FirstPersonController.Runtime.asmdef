@@ -1,5 +1,5 @@
 {
-    "name": "DyrdaIo.FirstPersonController.Runtime",
+    "name": "DyrdaDev.FirstPersonController.Runtime",
     "rootNamespace": "",
     "references": [
         "UniRx",

@@ -2,7 +2,7 @@
 using UniRx;
 using UnityEngine;
 
-namespace DyrdaIo.FirstPersonController
+namespace DyrdaDev.FirstPersonController
 {
     public abstract class FirstPersonControllerInput : MonoBehaviour
     {
