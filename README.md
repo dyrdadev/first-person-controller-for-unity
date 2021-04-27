@@ -4,12 +4,12 @@
 
 > 🧪 **EXPERIMENTAL** This project is experimental. It is still under development. It may be unstable. It is not optimized and largely untested . Do **not** use this project in critical projects.
 
-This package includes a First-Person Controller for Unity. Check out the [Features](#features) section for a detailed list of all features of the controller. The footage below shows the open-source sample project ["Mapper's Peak"](https://github.com/dyrdaio/mappers-peak) using the First-Person Controller.
+This package includes a First-Person Controller for Unity. Check out the [Features](#features) section for a detailed list of all features of the controller. The footage below shows the open-source sample project ["Mapper's Peak"](https://github.com/dyrdadev/mappers-peak) using the First-Person Controller.
 
 <p align=center>
     <br>
     <br>
-    <a href="https://github.com/dyrdaio/first-person-controller-for-unity">
+    <a href="https://github.com/dyrdadev/first-person-controller-for-unity">
         <img src="./Media/first_person_controller_github_preview.gif" alt="Gameplay footage from the 'Mapper's Peak' sample project using the First-Person Controller"/>
     </a>
     <br>
@@ -65,12 +65,12 @@ You can install this package with unity's [package manager](https://docs.unity3d
 
 ### Install the Package from a Git URL
 
-You can install the package using a Git URL. This is possible for direct dependencies of a project specified in its ```manifest.json```. Add a new package with the git-HTTPS URL to the version you want to install in the form "https://github.com/dyrdaio/first-person-controller-for-unity.git#{version}", where {version} is the actual version of the release you want to install. For example, if you want to install version "0.0.2" of this package, you can refer to https://github.com/dyrdaio/first-person-controller-for-unity.git#0.0.2.
+You can install the package using a Git URL. This is possible for direct dependencies of a project specified in its ```manifest.json```. Add a new package with the git-HTTPS URL to the version you want to install in the form ``https://github.com/dyrdadev/first-person-controller-for-unity.git#{version}``, where {version} is the actual version of the release you want to install. For example, if you want to install version "0.0.3" of this package, you can refer to ``https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3``.
 
 You can do this by using the Package Manager window or the manifest.json directly:
 
 1. **Installing from a Git URL using the Package Manager window.** Open the Package Manager window. Click "+", then "Add package from git URL" and enter the git URL from above. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
-2. **Installing from a Git URL using the manifest.json.** You can add a new entry to the manifest.json file in the ``Packages`` folder of your unity project: ```"io.dyrda.first-person-controller": "https://github.com/dyrdaio/first-person-controller-for-unity.git#upm"```. You can find more information [here](https://docs.unity3d.com/Manual/upm-git.html).
+2. **Installing from a Git URL using the manifest.json.** You can add a new entry to the manifest.json file in the ``Packages`` folder of your unity project: ```"dev.dyrda.first-person-controller": "https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3"```. You can find more information [here](https://docs.unity3d.com/Manual/upm-git.html).
 
 ## License
 
@@ -80,6 +80,6 @@ This package is licensed under a MIT license. See the [LICENSE](/LICENSE.md) fil
 
 This project was created by [Daniel Dyrda](https://dyrda.io).
 
-> Daniel: _If you want to support me and my projects, you can follow me on [github (dyrdaio)](https://github.com/dyrdaio) and [twitter (@dyrdaio)](https://twitter.com/dyrdaio). Just come by and say hello, I would love to hear how you use the project._
+> Daniel: _If you want to support me and my projects, you can follow me on [github (dyrdadev)](https://github.com/dyrdadev) and [twitter (@daniel_dyrda)](https://twitter.com/daniel_dyrda). Just come by and say hello, I would love to hear how you use the project._
 
-If you want to contribute to this project, you are welcome to do so. Just write Daniel and we will find a way to collaborate.
+If you want to contribute to this project, you are welcome to do so. Just write me and we will find a way to collaborate.
