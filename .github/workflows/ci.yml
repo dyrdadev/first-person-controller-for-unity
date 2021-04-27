@@ -9,7 +9,7 @@ jobs:
     name: Deploy to UPM
     runs-on: ubuntu-latest
     env:
-        PKG_ROOT: Packages/io.dyrda.first-person-controller
+        PKG_ROOT: Packages/dev.dyrda.first-person-controller
     steps:
     - uses: actions/checkout@v2
       with:
