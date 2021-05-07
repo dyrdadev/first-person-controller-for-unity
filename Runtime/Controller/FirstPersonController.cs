@@ -13,7 +13,7 @@ namespace DyrdaDev.FirstPersonController
     {
         #region Character Signals
 
-        public IObservable<Vector3> moved => _moved;
+        public IObservable<Vector3> Moved => _moved;
         private Subject<Vector3> _moved;
 
         public ReactiveProperty<bool> IsRunning => _isRunning;
@@ -165,7 +165,7 @@ namespace DyrdaDev.FirstPersonController
             // Emit stepped events:
             
             var stepDistance = 0f;
-            moved.Subscribe(w =>
+            Moved.Subscribe(w =>
             {
                 stepDistance += w.magnitude;
 

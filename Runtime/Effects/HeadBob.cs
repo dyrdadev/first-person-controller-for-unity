@@ -32,7 +32,7 @@ namespace DyrdaDev.FirstPersonController
         private void Start()
         {
             var distance = 0f;
-            _characterSignals.moved.Subscribe(w =>
+            _characterSignals.Moved.Subscribe(w =>
             {
                 // Calculate stride progress.
                 distance += w.magnitude;

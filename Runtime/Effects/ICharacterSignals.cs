@@ -19,7 +19,7 @@ namespace DyrdaDev.FirstPersonController
         /// <summary>
         ///     A stream with the vectors the character has moved.
         /// </summary>
-        IObservable<Vector3> moved { get; }
+        IObservable<Vector3> Moved { get; }
 
         /// <summary>
         ///     A stream with landed events. Triggered when the character switches form airborne to grounded.
