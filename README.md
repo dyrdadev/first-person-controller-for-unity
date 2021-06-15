@@ -1,9 +1,19 @@
 <p align=center>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <a href="https://github.com/dyrdadev/first-person-controller-for-unity">
         <img src="./Media/first-person-controller-icon-preview.png" alt="An icon of the first person controller for unity project." width="162px"/>
     </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
