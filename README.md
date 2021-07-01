@@ -4,9 +4,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 <div align=center>
 <a href="https://github.com/dyrdadev/first-person-controller-for-unit">
     <img src="./Media/icon.png" alt="An icon of the first person controller for unity project." width="148px"/>
@@ -15,10 +12,6 @@
 <h6 align=center>
     First-Person Controller <br/> for Unity
 </h6>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
