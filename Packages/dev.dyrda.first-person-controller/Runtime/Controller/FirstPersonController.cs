@@ -124,8 +124,8 @@ namespace DyrdaDev.FirstPersonController
                         horizontalVelocity.y));
 
                     // Apply movement.
-                    var distance = characterVelocity * Time.deltaTime;
-                    _characterController.Move(distance);
+                    var motion = characterVelocity * Time.deltaTime;
+                    _characterController.Move(motion);
 
                     // Set ICharacterSignals output signals related to the movement.
                     HandleLocomotionCharacterSignalsIteration(wasGrounded, _characterController.isGrounded);
