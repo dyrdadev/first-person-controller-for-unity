@@ -40,7 +40,7 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 ## Quick Start
 
 1. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
-2. **Install UniRx:** The package depends on [UniRx](https://github.com/neuecc/UniRx). Unfortunately, this dependency cannot be included automatically. The reason is described below in the ["Special Dependencies"](#unirx) section. You have to include UniRx in your project. UniRx is available [via Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276) or you can include it [as UPM package](https://github.com/neuecc/UniRx#upm-package).
+2. **Install UniRx:** The package depends on [UniRx](https://github.com/neuecc/UniRx). Unfortunately, this dependency cannot be included automatically. The reason is described below in the ["Special Dependencies"](#unirx) section. You have to include UniRx in your project. UniRx is available [as UPM package](https://github.com/neuecc/UniRx#upm-package) or you can import it [from the Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276).
 3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
@@ -48,7 +48,7 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 
 ## UniRx
 
-The controller depends on UniRx. UniRx is the implementation of ReactiveX for Unity. Unfortunately, it is not possible to add it as dependency because Unity doesn’t support Git URLs for indirect dependencies. UniRx has to be installed manually in your project that uses the First Person Controller.
+The controller depends on [UniRx](https://github.com/neuecc/UniRx). UniRx is the implementation of [ReactiveX](http://reactivex.io/) for Unity. Unfortunately, it is not possible to add it as dependency because Unity doesn’t support Git URLs for indirect dependencies. UniRx has to be installed manually in your project that uses the First Person Controller. UniRx is available [as UPM package](https://github.com/neuecc/UniRx#upm-package) or you can import it [from the Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276).
 
 If you want to learn UniRx to extend the controller or use it for other components, I recommend you the tutorial series ["ReactiveX and Unity3D"](https://ornithoptergames.com/reactiverx-in-unity3d-part-1/) by Tyler Coles. Also check out the official material of [UniRx](https://github.com/neuecc/UniRx) and [ReactiveX](http://reactivex.io/).
 
