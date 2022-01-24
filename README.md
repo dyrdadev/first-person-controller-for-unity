@@ -70,15 +70,10 @@ The First-Person Controller implements physics based locomotion so you can move 
 
 ### Character Effects
 
-The controller implements a ```ICharacterSignals``` interface for character effects such as character audio or camera effects. The interface offers you an easy way to implement your own effects. The package includes the following effects, which are already implemented:
+The controller implements a ```ICharacterSignals``` interface for character effects such as character audio or camera effects. The interface offers you an easy way to implement your own effects. The package currently includes the following effects, which are already implemented:
 
-#### Head Bob
-
-The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
-
-#### Footstep Sound Effects
-
-The package includes an optional component for footstep sound effects of the character.
+- **Head Bob** The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
+- **Sound Effects** The package includes an optional component for sound effects of the character.
 
 ## Install the Package
 
