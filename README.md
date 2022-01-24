@@ -54,7 +54,7 @@ If you want to learn UniRx to extend the controller or use it for other componen
 
 ## Input System Package
 
-The project includes player input and uses Unity's new [Input System Package](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system with the Input Manager in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If you need the ```UnityEngine.Input``` input system, you can set the "Active Input Handling" option in the Player settings (Project Settings -> Player -> Other Settings) to ```Both```. Then you can use the new Input System Package System and the old Input Manager with the ```UnityEngine.Input``` class.
+The project includes player input and uses Unity's new [Input System Package](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html). The new system replaces the classic input system with the Input Manager in ```UnityEngine.Input```. On import, Unity asks you if your project should be updated to the new Input System. If you need the ```UnityEngine.Input``` input system, you can set the "Active Input Handling" option in the Player settings (Project Settings ➜ Player ➜ Other Settings) to ```Both```. Then you can use the new Input System Package System and the old Input Manager with the ```UnityEngine.Input``` class.
 
 If you do not want to switch to the new input system, you can implement your own ```FirstPersonControllerInput``` class that uses the input system of your choice.
 
@@ -66,7 +66,7 @@ The First-Person Controller supports a mouse + keyboard input scheme and a gamep
 
 ### Full Locomotion
 
-The First-Person Controller implements physics based locomotion so you can move around, and run, and jump.
+The First-Person Controller implements physics based locomotion so you can move around, run, and jump.
 
 ### Character Effects
 
@@ -76,22 +76,17 @@ The controller implements a ```ICharacterSignals``` interface for character effe
 
 The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
 
-#### Sound Effects
+#### Footstep Sound Effects
 
-The package includes an optional component for sound effects of the character.
+The package includes an optional component for footstep sound effects of the character.
 
 ## Install the Package
 
-You can install this package with unity's [package manager](https://docs.unity3d.com/Manual/PackagesList.html).
+I recommend **to install this package from a Git URL using the Package Manager window.** This involves the following steps:
 
-### Install the Package from a Git URL
-
-You can install the package using a Git URL. This is possible for direct dependencies of a project specified in its ```manifest.json```. Add a new package with the git-HTTPS URL to the version you want to install in the form ``https://github.com/dyrdadev/first-person-controller-for-unity.git#{version}``, where {version} is the actual version of the release you want to install. For example, if you want to install version "0.0.3" of this package, you can refer to ``https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3``.
-
-You can do this by using the Package Manager window or the manifest.json directly:
-
-1. **Installing from a Git URL using the Package Manager window.** Open the Package Manager window. Click "+", then "Add package from git URL" and enter the git URL from above. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
-2. **Installing from a Git URL using the manifest.json.** You can add a new entry to the manifest.json file in the ``Packages`` folder of your unity project: ```"dev.dyrda.first-person-controller": "https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3"```. You can find more information [here](https://docs.unity3d.com/Manual/upm-git.html).
+1. Open the Package Manager window in your Unity editor (Window ➜ Package Manager)
+2. Click "+" in the upper left corner ➜ "Add package from git URL" 
+4. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3```. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
 
 ## License
 
@@ -99,8 +94,8 @@ This package is licensed under a MIT license. See the [LICENSE](/LICENSE.md) fil
 
 ## Support & Contribute
 
-This project was created by [Daniel Dyrda](https://dyrda.io).
+This project was created by [Daniel Dyrda](https://dyrda.page).
 
-> Daniel: _If you want to support me and my projects, you can follow me on [github (dyrdadev)](https://github.com/dyrdadev) and [twitter (@daniel_dyrda)](https://twitter.com/daniel_dyrda). Just come by and say hello, I would love to hear how you use the project._
+> Daniel: _If you want to support me and my projects, you can follow me on [github (dyrdadev)](https://github.com/dyrdadev) and [twitter (@daniel_dyrda)](https://twitter.com/daniel_dyrda). Just come by and say hello, I would love to hear how you are using the project._
 
 If you want to contribute to this project, you are welcome to do so. Just write me and we will find a way to collaborate.
