@@ -94,7 +94,7 @@ This package is licensed under an MIT license. See the [LICENSE](/LICENSE.md) fi
 
 ## Special Thanks
 
-This project was inspired by the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles. Many approaches of this tutorial series inspired features of this project. And the tutorial is what introduced me to Reactive Programmin in Unity in the first place. I recommend checking out the tutorial series.
+This project was inspired by the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles. Many approaches of this tutorial series inspired features of this project. And the tutorial is what introduced me to Reactive Programming in Unity in the first place. I recommend checking out the tutorial series.
 
 ## Support & Contribute
 
