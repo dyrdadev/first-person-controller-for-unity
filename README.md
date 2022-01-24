@@ -44,6 +44,15 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
+## Install the Package
+
+I recommend **to install this package from a Git URL using the Package Manager window.** This involves the following steps:
+
+1. Open the Package Manager window in your Unity editor (Window ➜ Package Manager)
+2. Click "+" in the upper left corner ➜ "Add package from git URL" 
+4. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3```. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
+
+
 ## Special Dependencies
 
 ## UniRx
@@ -74,14 +83,6 @@ The controller implements an ```ICharacterSignals``` interface for character eff
 
 - **Head Bob** The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
 - **Sound Effects** The package includes an optional component for sound effects of the character.
-
-## Install the Package
-
-I recommend **to install this package from a Git URL using the Package Manager window.** This involves the following steps:
-
-1. Open the Package Manager window in your Unity editor (Window ➜ Package Manager)
-2. Click "+" in the upper left corner ➜ "Add package from git URL" 
-4. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3```. You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
 
 ## License
 
