@@ -23,7 +23,7 @@
 
 > A First-Person Controller for Unity.
 
-> 🧪 **EXPERIMENTAL** This project is experimental. It is still under development. It may be unstable. It is not optimized and largely untested . Do **not** use this project in critical projects.
+> 🧪 **EXPERIMENTAL** This project is experimental. It is still under development. It may be unstable. It is not optimized and largely untested. Do **not** use this project in critical projects.
 
 This package includes a First-Person Controller for Unity. Check out the [Features](#features) section for a detailed list of all features of the controller. The footage below shows the open-source sample project ["Mapper's Peak"](https://github.com/dyrdadev/mappers-peak) using the First-Person Controller.
 
@@ -66,11 +66,11 @@ The First-Person Controller supports a mouse + keyboard input scheme and a gamep
 
 ### Full Locomotion
 
-The First-Person Controller implements physics based locomotion so you can move around, run, and jump.
+The First-Person Controller implements physics-based locomotion so you can move around, run, and jump.
 
 ### Character Effects
 
-The controller implements a ```ICharacterSignals``` interface for character effects such as character audio or camera effects. The interface offers you an easy way to implement your own effects. The package currently includes the following effects, which are already implemented:
+The controller implements an ```ICharacterSignals``` interface for character effects such as character audio or camera effects. The interface offers you an easy way to implement your own effects. The package currently includes the following effects, which are already implemented:
 
 - **Head Bob** The package includes an optional head bob effect for walking and running. The effect moves the camera slightly up and down to simulate the movement.
 - **Sound Effects** The package includes an optional component for sound effects of the character.
