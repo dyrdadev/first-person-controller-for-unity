@@ -1,6 +1,9 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 namespace DyrdaDev.FirstPersonController
 {
@@ -16,7 +19,7 @@ namespace DyrdaDev.FirstPersonController
         }
 #endif
 
-        [RuntimeInitializeOnLoadMethod]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize()
         {
             InputSystem.RegisterProcessor<DivideVector2ByDeltaTimeProcessor>();
