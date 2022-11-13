@@ -50,7 +50,7 @@ I recommend **installing this package from a Git URL using the Package Manager w
 
 1. Open the Package Manager window in your Unity editor (Window ➜ Package Manager)
 2. Click "+" in the upper left corner ➜ "Add package from git URL" 
-3. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.3``` and click "Add"
+3. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.4``` and click "Add"
 
 > You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
 
