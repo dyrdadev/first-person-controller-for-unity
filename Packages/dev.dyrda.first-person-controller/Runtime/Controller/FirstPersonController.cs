@@ -48,6 +48,8 @@ namespace DyrdaDev.FirstPersonController
         [Header("Look Properties")]
         [Range(-90, 0)] [SerializeField] private float minViewAngle = -60f;
         [Range(0, 90)] [SerializeField] private float maxViewAngle = 60f;
+        [SerializeField] private float xRotationSpeed = 1f;
+        [SerializeField] private float yRotationSpeed = 1f;
 
         #endregion
 
@@ -187,11 +189,11 @@ namespace DyrdaDev.FirstPersonController
                     // Translate 2D mouse input into euler angle rotations.
 
                     // Horizontal look with rotation around the vertical axis, where + means clockwise.
-                    var horizontalLook = inputLook.x * Vector3.up * Time.deltaTime;
+                    var horizontalLook = inputLook.x * Vector3.up * xRotationSpeed * Time.deltaTime;
                     transform.localRotation *= Quaternion.Euler(horizontalLook);
 
                     // Vertical look with rotation around the horizontal axis, where + means upwards.
-                    var verticalLook = inputLook.y * Vector3.left * Time.deltaTime;
+                    var verticalLook = inputLook.y * Vector3.left * yRotationSpeed * Time.deltaTime;
                     var newQ = _camera.transform.localRotation * Quaternion.Euler(verticalLook);
                     
                     _camera.transform.localRotation =
