@@ -98,6 +98,6 @@ This project was inspired by the tutorial series ["ReactiveX and Unity3D"](https
 
 This project was created by [Daniel Dyrda](https://dyrda.page).
 
-> Daniel: _If you want to support me and my projects, you can follow me on [GitHub (dyrdadev)](https://github.com/dyrdadev) and [Twitter (@daniel_dyrda)](https://twitter.com/daniel_dyrda). Just come by and say hello, I would love to hear how you are using the project._
+> Daniel: _If you want to support me and my projects, you can follow me on [GitHub (dyrdadev)](https://github.com/dyrdadev) and [Mastodon](https://dyrda.page/contact). Just come by and say hello, I would love to hear how you are using the project._
 
 If you want to contribute to this project, you are welcome to do so. Just write to me and we will find a way to collaborate. 
