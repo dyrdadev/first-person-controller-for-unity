@@ -1,6 +1,6 @@
 ﻿using System;
-using UniRx;
-using UniRx.Triggers;
+using R3;
+using R3.Triggers;
 using UnityEngine;
 
 namespace DyrdaDev.FirstPersonController
@@ -9,17 +9,17 @@ namespace DyrdaDev.FirstPersonController
     {
         #region Controller Input Fields
 
-        public override IObservable<Vector2> Move => _move;
-        private IObservable<Vector2> _move;
+        public override Observable<Vector2> Move => _move;
+        private Observable<Vector2> _move;
 
-        public override IObservable<Unit> Jump => _jump;
+        public override Observable<Unit> Jump => _jump;
         private Subject<Unit> _jump;
 
         public override ReadOnlyReactiveProperty<bool> Run => _run;
         private ReadOnlyReactiveProperty<bool> _run;
 
-        public override IObservable<Vector2> Look => _look;
-        private IObservable<Vector2> _look;
+        public override Observable<Vector2> Look => _look;
+        private Observable<Vector2> _look;
 
         #endregion
 

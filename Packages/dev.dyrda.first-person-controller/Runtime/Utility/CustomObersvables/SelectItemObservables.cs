@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using UniRx;
-using UniRx.Triggers;
+using R3;
+using R3.Triggers;
 using Random = UnityEngine.Random;
 
 namespace DyrdaDev.FirstPersonController
@@ -15,7 +15,7 @@ namespace DyrdaDev.FirstPersonController
         /// <param name="items"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static IObservable<T> SelectRandom<T>(this IObservable<Unit> eventObs, T[] items)
+        public static Observable<T> SelectRandom<T>(this Observable<Unit> eventObs, T[] items)
         {
             if (items.Length == 0)
             {
@@ -29,7 +29,7 @@ namespace DyrdaDev.FirstPersonController
                         // Select random item and emit it.
                         observer.OnNext(items[Random.Range(0, items.Length)]);
                     },
-                    observer.OnError,
+                    observer.OnErrorResume,
                     observer.OnCompleted);
 
                 return Disposable.Create(() => sub.Dispose());
@@ -43,7 +43,7 @@ namespace DyrdaDev.FirstPersonController
         /// <param name="items"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static IObservable<T> SelectAlternating<T>(this IObservable<Unit> eventObs, T[] items)
+        public static Observable<T> SelectAlternating<T>(this Observable<Unit> eventObs, T[] items)
         {
             switch (items.Length)
             {
@@ -68,7 +68,7 @@ namespace DyrdaDev.FirstPersonController
                         // Emit the selected value.
                         observer.OnNext(items[i]);
                     },
-                    observer.OnError,
+                    observer.OnErrorResume,
                     observer.OnCompleted);
 
                 return Disposable.Create(() => sub.Dispose());

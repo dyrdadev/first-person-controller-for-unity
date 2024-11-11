@@ -1,5 +1,5 @@
 ﻿using System;
-using UniRx;
+using R3;
 using UnityEngine;
 
 namespace DyrdaDev.FirstPersonController
@@ -19,21 +19,21 @@ namespace DyrdaDev.FirstPersonController
         /// <summary>
         ///     A stream with the vectors the character has moved.
         /// </summary>
-        IObservable<Vector3> Moved { get; }
+        Observable<Vector3> Moved { get; }
 
         /// <summary>
         ///     A stream with landed events. Triggered when the character switches form airborne to grounded.
         /// </summary>
-        IObservable<Unit> Landed { get; }
+        Observable<Unit> Landed { get; }
 
         /// <summary>
         ///     A stream with jumped events. Triggered when the character starts to jump.
         /// </summary>
-        IObservable<Unit> Jumped { get; }
+        Observable<Unit> Jumped { get; }
 
         /// <summary>
         ///     A stream with stepped events. Triggered when the camera has moved one stride length.
         /// </summary>
-        IObservable<Unit> Stepped { get; }
+        Observable<Unit> Stepped { get; }
     }
 }
