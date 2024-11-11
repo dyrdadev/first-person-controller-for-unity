@@ -40,7 +40,7 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 ## Quick Start
 
 1. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
-2. **Install UniRx:** The package depends on [UniRx](https://github.com/neuecc/UniRx). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include UniRx in your project. UniRx is available [as UPM package](https://github.com/neuecc/UniRx#upm-package) or you can import it [from the Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276).
+2. **Install R3:** The package depends on [R3](https://github.com/Cysharp/R3). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include R3 in your project. R3 is available [as UPM package](https://github.com/Cysharp/R3).
 3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
@@ -50,18 +50,20 @@ I recommend **installing this package from a Git URL using the Package Manager w
 
 1. Open the Package Manager window in your Unity editor (Window ➜ Package Manager)
 2. Click "+" in the upper left corner ➜ "Add package from git URL" 
-3. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.0.4``` and click "Add"
+3. Enter the Git URL of the latest release: ```https://github.com/dyrdadev/first-person-controller-for-unity.git#0.1.0``` and click "Add"
 
 > You can find more information [here](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
 
 
 ## Special Dependencies
 
-## UniRx
+## R3
 
-The controller depends on [UniRx](https://github.com/neuecc/UniRx). UniRx is the implementation of [ReactiveX](http://reactivex.io/) for Unity. Unfortunately, it is not possible to add it as a dependency because Unity doesn’t support Git URLs for indirect dependencies. UniRx has to be installed manually in your project that uses the First Person Controller. UniRx is available [as UPM package](https://github.com/neuecc/UniRx#upm-package) or you can import it [from the Asset Store](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276).
+The controller depends on [R3](https://github.com/Cysharp/R3). R3 is the implementation of [ReactiveX](http://reactivex.io/) for Unity. Unfortunately, it is not possible to add it as a dependency because Unity doesn’t support Git URLs for indirect dependencies. R3 has to be installed manually in your project that uses the First Person Controller. R3 is available [as UPM package](https://github.com/neuecc/UniRx#upm-package).
 
-If you want to learn UniRx to extend the controller or use it for other components, I recommend the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles. Also check out the official material of [UniRx](https://github.com/neuecc/UniRx) and [ReactiveX](http://reactivex.io/).
+If you want to learn R3 to extend the controller or use it for other components, I recommend the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles. Also check out the official material of [R3](https://github.com/Cysharp/R3) and [ReactiveX](http://reactivex.io/).
+
+> **_NOTE:_** The tutorial series by Tyler Coles is about the predecessor UniRx, not R3. However, much of the syntax has remained between the versions, with the biggest change being the change from `IObserver`/`IObservable` to the classes provided by R3 `Observer`/`Observable`, respectively. 
 
 ## Input System Package
 
@@ -96,7 +98,7 @@ This project was inspired by the tutorial series ["ReactiveX and Unity3D"](https
 
 ## Support & Contribute
 
-This project was created by [Daniel Dyrda](https://dyrda.page).
+This project was created by [Daniel Dyrda](https://dyrda.page) and migrated to R3 by Martin Schacherbauer.
 
 > Daniel: _If you want to support me and my projects, you can follow me on [GitHub (dyrdadev)](https://github.com/dyrdadev) and [Mastodon](https://dyrda.page/contact). Just come by and say hello, I would love to hear how you are using the project._
 
