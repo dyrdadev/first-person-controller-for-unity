@@ -40,7 +40,7 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 ## Quick Start
 
 1. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
-2. **Install R3:** The package depends on [R3](https://github.com/Cysharp/R3). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include R3 in your project. R3 is available [as UPM package](https://github.com/Cysharp/R3).
+2. **Install R3:** The package depends on [R3](https://github.com/Cysharp/R3). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include R3 in your project. An installation guide is available [here](https://github.com/Cysharp/R3#unity).
 3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
@@ -59,9 +59,9 @@ I recommend **installing this package from a Git URL using the Package Manager w
 
 ## R3
 
-The controller depends on [R3](https://github.com/Cysharp/R3). R3 is the implementation of [ReactiveX](http://reactivex.io/) for Unity. Unfortunately, it is not possible to add it as a dependency because Unity doesn’t support Git URLs for indirect dependencies. R3 has to be installed manually in your project that uses the First Person Controller. R3 is available [as UPM package](https://github.com/neuecc/UniRx#upm-package).
+The controller depends on [R3](https://github.com/Cysharp/R3). R3 is the implementation of [ReactiveX](http://reactivex.io/) for Unity. Unfortunately, it is not possible to add it as a dependency because Unity doesn’t support Git URLs for indirect dependencies. R3 has to be installed manually in your project that uses the First Person Controller. An installation guide is available [here](https://github.com/Cysharp/R3#unity).
 
-If you want to learn R3 to extend the controller or use it for other components, I recommend the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles. Also check out the official material of [R3](https://github.com/Cysharp/R3) and [ReactiveX](http://reactivex.io/).
+If you want to learn reactive programming in games to extend the controller or use it for other components, I recommend the tutorial series ["ReactiveX and Unity3D"](https://javadocmd.com/blog/reactivex-unity3d-part-1/) by Tyler Coles (Implemented with UniRx). Also check out the official material of [R3](https://github.com/Cysharp/R3) and [ReactiveX](http://reactivex.io/).
 
 > **_NOTE:_** The tutorial series by Tyler Coles is about the predecessor UniRx, not R3. However, much of the syntax has remained between the versions, with the biggest change being the change from `IObserver`/`IObservable` to the classes provided by R3 `Observer`/`Observable`, respectively. 
 
