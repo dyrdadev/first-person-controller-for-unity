@@ -15,7 +15,8 @@
 !/[Aa]ssets/**/*.meta
 
 # NuGet
-!/[Aa]ssets/[Pp]ackages/
+!/[Aa]ssets/Packages/
+!/[Aa]ssets/packages/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
