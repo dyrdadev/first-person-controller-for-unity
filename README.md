@@ -39,8 +39,8 @@ This package includes a First-Person Controller for Unity. Check out the [Featur
 
 ## Quick Start
 
-1. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
-2. **Install R3:** The package depends on [R3](https://github.com/Cysharp/R3). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include R3 in your project. An installation guide is available [here](https://github.com/Cysharp/R3#unity).
+1. **Install R3:** The package depends on [R3](https://github.com/Cysharp/R3). Unfortunately, this dependency cannot be included automatically; the reason is described below in the ["Special Dependencies"](#unirx) section. You have to include R3 in your project. An installation guide is available [here](https://github.com/Cysharp/R3#unity).
+2. **Install the First Person Controller:** Install this package as described [below](#install-the-package).
 3. **Update to Unity's new Input System** This package uses Unity's [Input System](https://docs.unity3d.com/2020.2/Documentation/Manual/com.unity.inputsystem.html) package. When asked from Unity, update to Unity's new Input System. Alternatively, you can implement your own ```FirstPersonControllerInput``` class and ignore the existing PlayerInput folder.
 4. **Explore your scene:** Add the "FirstPersonPlayer" prefab from the package to your scene. Now you can explore your scene with the First-Person Controller.
 
