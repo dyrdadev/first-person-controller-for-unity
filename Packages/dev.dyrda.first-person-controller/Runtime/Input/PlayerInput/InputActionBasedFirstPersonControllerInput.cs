@@ -7,77 +7,21 @@ namespace DyrdaDev.FirstPersonController
 {
     public class InputActionBasedFirstPersonControllerInput : FirstPersonControllerInput
     {
-        #region Controller Input Fields
-
-        public override Observable<Vector2> Move => _move;
-        private Observable<Vector2> _move;
-
-        public override Observable<Unit> Jump => _jump;
-        private Subject<Unit> _jump;
-
-        public override ReadOnlyReactiveProperty<bool> Run => _run;
-        private ReadOnlyReactiveProperty<bool> _run;
-
-        public override Observable<Vector2> Look => _look;
-        private Observable<Vector2> _look;
-
-        #endregion
-
-        #region Configuration
-
-        [Header("Look Properties")]
-        [SerializeField] private float lookSmoothingFactor = 14.0f;
-
-        private FirstPersonInputAction _controls;
-
-        #endregion
-
-        private void OnEnable()
+        public override Observable<Vector2> Move
         {
-            _controls.Enable();
+            get { return null; }
         }
-
-        private void OnDisable()
+        public override Observable<Unit> Jump
         {
-            _controls.Disable();
+            get { return null; }
         }
-
-        protected void Awake()
+        public override ReadOnlyReactiveProperty<bool> Run
         {
-            _controls = new FirstPersonInputAction();
-
-            // Hide the mouse cursor and lock it in the game window.
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
-            // Move:
-            _move = this.UpdateAsObservable()
-                .Select(_ => _controls.Character.Move.ReadValue<Vector2>());
-
-            // Jump:
-            _jump = new Subject<Unit>().AddTo(this);
-            _controls.Character.Jump.performed += context => _jump.OnNext(Unit.Default);
-
-
-            // Run:
-            _run = this.UpdateAsObservable()
-                .Select(_ => _controls.Character.Run.ReadValueAsObject() != null)
-                .ToReadOnlyReactiveProperty();
-
-            // Look:
-            var smoothLookValue = new Vector2(0, 0);
-            _look = this.UpdateAsObservable()
-                .Select(_ =>
-                {
-                    var rawLookValue = _controls.Character.Look.ReadValue<Vector2>();
-
-                    smoothLookValue = new Vector2(
-                        Mathf.Lerp(smoothLookValue.x, rawLookValue.x, lookSmoothingFactor * Time.deltaTime),
-                        Mathf.Lerp(smoothLookValue.y, rawLookValue.y, lookSmoothingFactor * Time.deltaTime)
-                    );
-
-                    return smoothLookValue;
-                });
+            get { return null; }
+        }
+        public override Observable<Vector2> Look
+        {
+            get { return null; }
         }
     }
 }
