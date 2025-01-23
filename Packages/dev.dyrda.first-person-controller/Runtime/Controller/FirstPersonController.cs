@@ -1,6 +1,5 @@
-﻿using System;
-using UniRx;
-using UniRx.Triggers;
+﻿using R3;
+using R3.Triggers;
 using UnityEngine;
 
 namespace DyrdaDev.FirstPersonController
@@ -13,19 +12,19 @@ namespace DyrdaDev.FirstPersonController
     {
         #region Character Signals
 
-        public IObservable<Vector3> Moved => _moved;
+        public Observable<Vector3> Moved => _moved;
         private Subject<Vector3> _moved;
 
         public ReactiveProperty<bool> IsRunning => _isRunning;
         private ReactiveProperty<bool> _isRunning;
 
-        public IObservable<Unit> Landed => _landed;
+        public Observable<Unit> Landed => _landed;
         private Subject<Unit> _landed;
 
-        public IObservable<Unit> Jumped => _jumped;
+        public Observable<Unit> Jumped => _jumped;
         private Subject<Unit> _jumped;
 
-        public IObservable<Unit> Stepped => _stepped;
+        public Observable<Unit> Stepped => _stepped;
         private Subject<Unit> _stepped;
 
         #endregion
@@ -114,7 +113,7 @@ namespace DyrdaDev.FirstPersonController
                     }
 
                     // Horizontal movement:
-                    var currentSpeed = firstPersonControllerInput.Run.Value ? runSpeed : walkSpeed;
+                    var currentSpeed = firstPersonControllerInput.Run.CurrentValue ? runSpeed : walkSpeed;
                     var horizontalVelocity = i.Move * currentSpeed; //Calculate velocity (direction * speed).
 
                     // Combine horizontal and vertical movement.
@@ -146,7 +145,7 @@ namespace DyrdaDev.FirstPersonController
                 {
                     // The character is running if the input is active and
                     // the character is actually moving on the ground
-                    tempIsRunning = firstPersonControllerInput.Run.Value;
+                    tempIsRunning = firstPersonControllerInput.Run.CurrentValue;
                 }
             }
 

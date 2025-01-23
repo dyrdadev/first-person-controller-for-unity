@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
-using UniRx;
-using UniRx.Triggers;
+using R3;
+using R3.Triggers;
 using Random = UnityEngine.Random;
 
 namespace DyrdaDev.FirstPersonController
 {
     public static class LatchObservables
     {
-        public static IObservable<bool> Latch(IObservable<Unit> tick, IObservable<Unit> latchTrue, bool initialValue)
+        public static Observable<bool> Latch(Observable<Unit> tick, Observable<Unit> latchTrue, bool initialValue)
         {
             // This custom observable is based on the "ReactiveX and Unity" tutorial series by Tyler Coles.
             // https://ornithoptergames.com/reactivex-and-unity3d-part-3/
@@ -18,21 +18,21 @@ namespace DyrdaDev.FirstPersonController
                 var state = initialValue;
 
                 // Whenever latch fires, state is set to true.
-                var latchSubscribtion = latchTrue.Subscribe(_ => state = true);
+                var latchSubscription = latchTrue.Subscribe(_ => state = true);
 
                 // Whenever tick fires, emit the current value and reset state.
-                var tickSubscribtion = tick.Subscribe(_ =>
+                var tickSubscription = tick.Subscribe(_ =>
                     {
                         observer.OnNext(state);
                         state = false;
                     },
-                    observer.OnError,
+                    observer.OnErrorResume,
                     observer.OnCompleted);
 
                 return Disposable.Create(() =>
                 {
-                    latchSubscribtion.Dispose();
-                    tickSubscribtion.Dispose();
+                    latchSubscription.Dispose();
+                    tickSubscription.Dispose();
                 });
             });
         }

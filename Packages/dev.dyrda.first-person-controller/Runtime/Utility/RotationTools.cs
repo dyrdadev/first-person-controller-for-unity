@@ -4,21 +4,21 @@ namespace DyrdaDev.FirstPersonController
 {
     public static class RotationTools
     {
-        public static Quaternion ClampRotationAroundXAxis(Quaternion q, float minAngle, float maxAngle)
-        {
-            // You can find an alternative implementation in the MouseLook script of the unity standard assets.
-            // Or check out https://ornithoptergames.com/reactivex-and-unity3d-part-3/
+        // Ripped straight out of the Standard Assets MouseLook script. (This should really be a standard function...)
+		public static Quaternion ClampRotationAroundXAxis(Quaternion q, float minAngle, float maxAngle) {
+			q.x /= q.w;
+			q.y /= q.w;
+			q.z /= q.w;
+			q.w = 1.0f;
 
-            var euler = q.eulerAngles;
+			float angleX = 2.0f * Mathf.Rad2Deg * Mathf.Atan(q.x);
 
-            if (euler.x > 180)
-            {
-                euler.x -= 360;
-            }
+			angleX = Mathf.Clamp(angleX, minAngle, maxAngle);
 
-            euler.x = Mathf.Clamp(euler.x, minAngle, maxAngle);
+			q.x = Mathf.Tan(0.5f * Mathf.Deg2Rad * angleX);
 
-            return Quaternion.Euler(euler);
-        }
+			return q;
+		}
+
     }
 }
